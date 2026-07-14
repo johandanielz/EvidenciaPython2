@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 from db import db
-from models import Celular
 from blueprints.celulares import celulares_bp
 from blueprints.clientes import clientes_bp
+from blueprints.proveedores import proveedores_bp
 
 app = Flask(__name__)
 
@@ -18,6 +18,7 @@ def home():
 
 app.register_blueprint(celulares_bp)
 app.register_blueprint(clientes_bp)
+app.register_blueprint(proveedores_bp)
     
 if __name__ == "__main__":
     app.run(debug=True)

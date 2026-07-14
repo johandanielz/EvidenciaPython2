@@ -27,3 +27,17 @@ class Cliente(db.Model):
             "email": self.email,
             "telefono": self.telefono
         }
+    
+class Proveedor(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(50), nullable=False)
+    contacto = db.Column(db.String(50), nullable=False)
+    telefono = db.Column(db.String(20), nullable=False)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "nombre": self.nombre,
+            "contacto": self.contacto,
+            "telefono": self.telefono
+        }
