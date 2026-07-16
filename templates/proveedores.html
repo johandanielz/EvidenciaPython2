@@ -5,17 +5,33 @@
     <title>Proveedores</title>
 </head>
 <body>
-    <a href="/">← Volver al menú</a>
+    <a href="/">Volver al menú</a>
     <h1>Crear Proveedor</h1>
 
     <form id="form-proveedor">
         <input type="text" name="nombre" placeholder="Nombre de la empresa" required>
         <input type="text" name="contacto" placeholder="Contacto" required>
         <input type="text" name="telefono" placeholder="Teléfono" required>
-        <button type="submit">Crear</button>
+        <button type="submit" id="btn-submit">Crear</button>
     </form>
 
     <p id="mensaje"></p>
+
+    <h2>Celulares registrados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Contacto</th>
+                <th>Telefono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-proveedores">
+            <!-- Aqui se insertan las filas de forma dinamica-->
+        </tbody>
+    </table>
 
     <script src="/static/proveedores.js"></script>
 </body>
