@@ -12,10 +12,26 @@
         <input type="text" name="marca" placeholder="Marca" required>
         <input type="text" name="modelo" placeholder="Modelo" required>
         <input type="number" name="precio" placeholder="Precio" step="0.01" required>
-        <button type="submit">Crear</button>
+        <button type="submit" id="btn-submit">Crear</button>
     </form>
 
     <p id="mensaje"></p>
+
+    <h2>Celulares registrados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-celulares">
+            <!-- Aqui se insertan las filas de forma dinamica-->
+        </tbody>
+    </table>
 
     <script src="/static/celulares.js"></script>
 </body>
